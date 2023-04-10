@@ -73,3 +73,7 @@ crashlytics-build.properties
 Packages/packages-lock.json
 Packages/packages-lock.json
 ProjectSettings/BurstAotSettings_StandaloneWindows.json
+Packages/manifest.json
+Packages/manifest.json
+Packages/packages-lock.json
+ProjectSettings/CommonBurstAotSettings.json
