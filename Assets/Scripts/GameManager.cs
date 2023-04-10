@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicEnemy : GameItem
+public class GameManager : MonoBehaviour
 {
-    public int x;
-    public int y;
+    public GameState gameState;
 
     // Start is called before the first frame update
     void Start()
@@ -18,4 +17,9 @@ public class BasicEnemy : GameItem
     {
         
     }
+}
+
+public enum GameState
+{
+
 }
