@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BasicEnemy : GameItem
 {
-    public int x;
-    public int y;
+    public int xOffset;
+    public int yOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +17,11 @@ public class BasicEnemy : GameItem
     void Update()
     {
         
+    }
+
+    public void SetPosition(int x, int y)
+    {
+        //transform.position.Set(x + xOffset, y + yOffset, 0);
+        transform.position = new Vector3(x + xOffset, y + yOffset, 1.0f);
     }
 }
