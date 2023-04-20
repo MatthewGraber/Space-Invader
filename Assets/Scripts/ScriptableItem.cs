@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ScriptableItem : ScriptableObject
 {
-    public ItemType itemType;
+    public ItemType unitType;
     public GameItem ItemPrefab;
     // public BaseUnit UnitPrefab;
     
@@ -15,8 +15,7 @@ public class ScriptableItem : ScriptableObject
 public enum ItemType
 {
     Player,
-    BasicEnemy,
-    CoolEnemy,
+    Enemy,
     Block,
     Projectile
 }
