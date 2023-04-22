@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ScriptableItem : ScriptableObject
 {
+    public int ID;
     public ItemType itemType;
     public GameItem ItemPrefab;
     // public BaseUnit UnitPrefab;

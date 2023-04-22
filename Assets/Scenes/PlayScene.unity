@@ -154,6 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _items: []
   enemies: []
+  specialEnemy: {fileID: 0}
+  x: 0
+  y: 0
+  initialPeriod: 1
+  period: 0
+  lastMove: 0
 --- !u!4 &1180483677
 Transform:
   m_ObjectHideFlags: 0
@@ -222,7 +228,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -283,6 +289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  level: 0
+  leftEdge: -300
+  rightEdge: 300
+  topEdge: 100
+  bottomEdge: -100
 --- !u!4 &1629648204
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ namespace Assets.Scripts
 
         public List<ScriptableItem> _items;
         public List<BasicEnemy> enemies;
+        public SpecialEnemy specialEnemy;
 
         // Total distances basic enemies travel along the x and y planes
         int pathWidth = 40;
@@ -29,9 +30,11 @@ namespace Assets.Scripts
         bool goingRight = true;
 
         // How often the enemies move
-        public float initialPeriod = 5f;
+        public float initialPeriod;
         public float period;
         public float lastMove;
+
+        float timeToSpecialSpawn;
 
         // Enemy spacing
         int spaceBetweenEnemies = 5;
@@ -48,12 +51,19 @@ namespace Assets.Scripts
         {
             enemies = new List<BasicEnemy>();
             _items = Resources.LoadAll<ScriptableItem>("Items").ToList();
-
+            timeToSpecialSpawn = Random.Range(20f, 40f);
         }
 
         // Update is called once per frame
         void Update()
         {
+            timeToSpecialSpawn -= Time.deltaTime;
+            if (timeToSpecialSpawn < 0)
+            {
+                timeToSpecialSpawn = Random.Range(20f, 40f);
+                var enemyPrefab = _items.Where(u => u.itemType == ItemType.CoolEnemy).First().ItemPrefab;
+                specialEnemy = (SpecialEnemy)Instantiate(enemyPrefab);
+            }
             if (Time.time > lastMove + period)
             {
                 lastMove = Time.time;
@@ -117,8 +127,7 @@ namespace Assets.Scripts
                 for (int j = 0; j < rowsOfEnemies; j++)
                 {
                     // Get an enemy prefab
-                    // TODO: Make it systematic, not random
-                    var enemyPrefab = _items.Where(u => u.itemType == ItemType.BasicEnemy).OrderBy(o => UnityEngine.Random.value).First().ItemPrefab;
+                    var enemyPrefab = _items.Where(u => u.itemType == ItemType.BasicEnemy && u.ID == (j/2)).First().ItemPrefab;
                     BasicEnemy newEnemy = (BasicEnemy)Instantiate(enemyPrefab);
 
                     newEnemy.xOffset = i * spaceBetweenEnemies;
