@@ -1,10 +1,17 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class EnemyManager : MonoBehaviour
     {
+        public static EnemyManager Instance;
+
+        public List<ScriptableItem> _items;
+        public List<BasicEnemy> enemies;
+        
+
         // Total distances basic enemies travel along the x and y planes
         int pathWidth;
         int pathHeight;
