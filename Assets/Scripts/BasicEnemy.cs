@@ -8,7 +8,6 @@ public class BasicEnemy : GameItem
     public int xOffset;
     public int yOffset;
     public int points = 10;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +28,11 @@ public class BasicEnemy : GameItem
             EnemyManager.Instance.enemies.Remove(this);
         }
         Destroy(this.gameObject);
+    }
+
+    public void SetPosition(int x, int y)
+    {
+        //transform.position.Set(x + xOffset, y + yOffset, 0);
+        transform.position = new Vector3(x + xOffset, y + yOffset, 1.0f);
     }
 }
