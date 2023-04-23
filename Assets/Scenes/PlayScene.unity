@@ -290,10 +290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   level: 0
-  leftEdge: -300
-  rightEdge: 300
-  topEdge: 100
-  bottomEdge: -100
+  leftEdge: -60
+  rightEdge: 60
+  topEdge: 30
+  bottomEdge: -30
 --- !u!4 &1629648204
 Transform:
   m_ObjectHideFlags: 0
