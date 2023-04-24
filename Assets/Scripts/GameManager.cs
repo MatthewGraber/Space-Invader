@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
             if (level == 0)
             {
                 EnemyManager.Instance.Reset();
+                BlockManager.Instance.SpawnBlocks();
             }
             else
             {
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
 
         gameState = state;
     }
+
 }
 
 public enum GameState

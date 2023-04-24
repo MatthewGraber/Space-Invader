@@ -10,12 +10,12 @@ public class Block : GameItem
     [SerializeField] Sprite S3;
     [SerializeField] Sprite S2;
     [SerializeField] Sprite S1;
-    [SerializeField] SpriteRenderer renderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        renderer.sprite = S3;
+        spriteRenderer.sprite = S3;
     }
 
     // Update is called once per frame
@@ -43,11 +43,11 @@ public class Block : GameItem
     {
         if (sprite == 2)
         {
-            renderer.sprite = S2;
+            spriteRenderer.sprite = S2;
         }
         else if (sprite == 1)
         {
-            renderer.sprite = S1;
+            spriteRenderer.sprite = S1;
         }
         else
         {
