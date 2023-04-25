@@ -27,13 +27,13 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.name == "Enemy")
         {
-            /*Enemy enemy = collision.GetComponent<Enemy>();
+            BasicEnemy enemy = collision.GetComponent<BasicEnemy>();
             if (enemy != null)
             {
                 enemy.TakeDamage();
-            }*/
-            
-            Destroy(gameObject);
+            }
+
+            Destroy(this.gameObject);
         }
     }
 }
