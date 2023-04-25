@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     public float runSpeed = 10f;
     public Transform firePoint;
     public GameObject bulletPrefab;
-<<<<<<< Updated upstream
-=======
     public Sprite runRight;
     public Sprite runLeft;
     public Sprite idle;
@@ -20,18 +18,11 @@ public class Player : MonoBehaviour
     public Sprite idleLeft;
     public float swingTimer;
     public float animTimer = 10f;
->>>>>>> Stashed changes
 
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-
-<<<<<<< Updated upstream
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-=======
 
         //Lord help me. This is a crazy nested if statement
         if (swingTimer < 20)
@@ -99,7 +90,6 @@ public class Player : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = swing;
                 swingTimer = 80;
             }
->>>>>>> Stashed changes
         }
     }
 

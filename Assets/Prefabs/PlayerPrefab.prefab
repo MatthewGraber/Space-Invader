@@ -105,8 +105,6 @@ MonoBehaviour:
   runSpeed: 5
   firePoint: {fileID: 2126845074687004071}
   bulletPrefab: {fileID: 0}
-<<<<<<< Updated upstream
-=======
   runRight: {fileID: 0}
   runLeft: {fileID: 0}
   idle: {fileID: 0}
@@ -115,7 +113,6 @@ MonoBehaviour:
   idleLeft: {fileID: 0}
   swingTimer: 0
   animTimer: 0
->>>>>>> Stashed changes
 --- !u!114 &7914238092677424262
 MonoBehaviour:
   m_ObjectHideFlags: 0
