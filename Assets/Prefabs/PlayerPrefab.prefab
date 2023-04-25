@@ -105,6 +105,7 @@ MonoBehaviour:
   runSpeed: 5
   firePoint: {fileID: 2126845074687004071}
   bulletPrefab: {fileID: 0}
+  runRight: {fileID: 0}
 --- !u!114 &7914238092677424262
 MonoBehaviour:
   m_ObjectHideFlags: 0
