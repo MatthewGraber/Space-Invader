@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6815182a6eff09c4f8fbf5fb871766ff
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Triforce
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 676202b7639a7cc4f91e5dcf97a900a7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
