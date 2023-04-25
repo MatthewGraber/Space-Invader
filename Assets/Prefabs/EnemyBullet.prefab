@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  projectileSpeed: -3
+  projectileSpeed: -7
   bullet: {fileID: 4679139764490611982}
   Bullet: {fileID: 1907319131732713840}
 --- !u!61 &-6164334343470566486

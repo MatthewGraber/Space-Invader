@@ -14,14 +14,15 @@ public class HealthManager : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i<health)
+            // TODO: Make this work
+            /*if (i<health)
             {
                 hearts[i].enabled = true;
             }
             else
             {
                 hearts[i].enabled = false;
-            }
+            }*/
         }
     }
 

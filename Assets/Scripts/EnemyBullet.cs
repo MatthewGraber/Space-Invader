@@ -28,8 +28,8 @@ namespace Assets.Scripts
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            
-            if (collision.name == "Player")
+            print("Collision with " + collision.tag);
+            if (collision.tag == "Player")
             {
                 HealthManager playerHealth = collision.GetComponent<HealthManager>();
                 if (playerHealth != null)
@@ -39,7 +39,7 @@ namespace Assets.Scripts
 
                 Destroy(this.gameObject);
             }
-            else if (collision.name == "Block")
+            else if (collision.tag == "Block")
             {
                 Block block = collision.GetComponent<Block>();
                 if (block != null)

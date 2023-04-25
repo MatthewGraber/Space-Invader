@@ -141,7 +141,7 @@ namespace Assets.Scripts
         // Sets enemy positions
         private void SetPositions()
         {
-            Debug.Log("Moving enemies to " + x + ", " + y);
+            //Debug.Log("Moving enemies to " + x + ", " + y);
 
             foreach (var enemy in enemies)
             {

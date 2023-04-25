@@ -54,6 +54,8 @@ public class BasicEnemy : GameItem
 
     public void Fire()
     {
-        Instantiate(bulletPrefab, transform);
+
+        Instantiate(bulletPrefab).transform.position = transform.position;
+        // print("Firing");
     }
 }

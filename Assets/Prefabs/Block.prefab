@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3961955133517265303}
   m_Layer: 0
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eedee2be2b3eb43879d1473d55d1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 4
   S3: {fileID: 21300000, guid: bf864946caa7e1342aad3141d718a324, type: 3}
   S2: {fileID: 21300000, guid: 9afdf065d558c41489d6bcca2da35b65, type: 3}
   S1: {fileID: 21300000, guid: 3a62971cb5cd7d84bae4a45619d2e9fd, type: 3}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 3069675708485874397}
 --- !u!212 &3069675708485874397
 SpriteRenderer:
   m_ObjectHideFlags: 0
