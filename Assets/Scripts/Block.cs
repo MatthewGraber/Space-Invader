@@ -24,7 +24,7 @@ public class Block : GameItem
         
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
         HP--;
         if (HP <= 0 )

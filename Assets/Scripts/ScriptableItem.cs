@@ -10,7 +10,12 @@ public class ScriptableItem : ScriptableObject
     public ItemType itemType;
     public GameItem ItemPrefab;
     // public BaseUnit UnitPrefab;
-    
+
+    private void Awake()
+    {
+        ItemPrefab.ID = ID;
+    }
+
 }
 
 public enum ItemType
