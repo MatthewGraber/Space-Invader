@@ -1,12 +1,13 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicEnemy : GameItem
 {
-    public int x;
-    public int y;
-
+    public int xOffset;
+    public int yOffset;
+    public int points = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,21 @@ public class BasicEnemy : GameItem
     void Update()
     {
         
+    }
+
+    public void TakeDamage()
+    {
+        // TODO: Give player points
+        if (EnemyManager.Instance.enemies.Contains(this))
+        {
+            EnemyManager.Instance.enemies.Remove(this);
+        }
+        Destroy(this.gameObject);
+    }
+
+    public void SetPosition(int x, int y)
+    {
+        //transform.position.Set(x + xOffset, y + yOffset, 0);
+        transform.position = new Vector3(x + xOffset, y + yOffset, 1.0f);
     }
 }
