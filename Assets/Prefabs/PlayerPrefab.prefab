@@ -113,6 +113,7 @@ MonoBehaviour:
   idleLeft: {fileID: 0}
   swingTimer: 0
   animTimer: 0
+  healthManager: {fileID: 7914238092677424262}
 --- !u!114 &7914238092677424262
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
     public int width => rightEdge - leftEdge;
     public int height => topEdge - bottomEdge;
 
+    [SerializeField] Player player;
+
     private void Awake()
     {
         Instance = this;
@@ -31,13 +34,29 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameState == GameState.Playing)
+        {
+            int state = EnemyManager.Instance.CurrentState();
+            if (state == 1)
+            {
+                changeState(GameState.BeginingLevel);
+            }
+            else if (state == -1)
+            {
+                changeState(GameState.Dying);
+            }
+            else if (player.healthManager.health <= 0)
+            {
+                changeState(GameState.Dying);
+            }
+        }
     }
 
 
     // Update gamestate
     public void changeState(GameState state)
     {
+        gameState = state;
         if (state == GameState.BeginingLevel)
         {
             if (level == 0)
@@ -50,6 +69,7 @@ public class GameManager : MonoBehaviour
                 EnemyManager.Instance.NextLevel();
             }
             level++;
+            changeState(GameState.Playing);
         }
         else if (state == GameState.Playing)
         {
@@ -57,10 +77,9 @@ public class GameManager : MonoBehaviour
         }
         else if (state ==  GameState.Dying)
         {
-
+            SceneManager.LoadScene("ScoreScene");
         }
 
-        gameState = state;
     }
 
 }
