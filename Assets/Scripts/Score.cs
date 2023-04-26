@@ -5,8 +5,7 @@ public class Score : MonoBehaviour
 {
     public static Score Instance;
     public int score;
-    public TextMeshPro scoreDisplay;
-    [SerializeField] GameObject textDisplay;
+    public TextMeshProUGUI textDisplay;
 
     void Awake()
     {
@@ -17,16 +16,16 @@ public class Score : MonoBehaviour
         }
         else if (Instance != this)
         {
+            Instance.textDisplay = textDisplay;
             Destroy(gameObject);
         }
-        textDisplay.TryGetComponent<TextMeshPro>(out Instance.scoreDisplay);
     }
 
     private void Update()
     {
-        if (scoreDisplay!= null)
+        if (textDisplay != null)
         {
-            scoreDisplay.text = score.ToString();
+            textDisplay.text = score.ToString();
         }
     }
 }

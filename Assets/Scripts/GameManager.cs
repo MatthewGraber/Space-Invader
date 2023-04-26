@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
             {
                 EnemyManager.Instance.Reset();
                 BlockManager.Instance.SpawnBlocks();
+                Score.Instance.score = 0;
             }
             else
             {
