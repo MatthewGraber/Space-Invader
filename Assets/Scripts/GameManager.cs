@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             int state = EnemyManager.Instance.CurrentState();
             if (state == 1)
             {
+                print("Width: " + Screen.width);
                 changeState(GameState.BeginingLevel);
             }
             else if (state == -1)

@@ -23,10 +23,10 @@ namespace Assets.Scripts
         int yIncrement = 2;
 
         // Current coordiantes for the group
-        int initialX = -30;
-        int initialY = 0;
-        public int x;
-        public int y;
+        public int initialX = -55;
+        public int initialY = -5;
+        int x;
+        int y;
         bool goingRight = true;
 
         // How often the enemies move
@@ -37,7 +37,7 @@ namespace Assets.Scripts
         float timeToSpecialSpawn;
 
         // Enemy spacing
-        int spaceBetweenEnemies = 5;
+        int spaceBetweenEnemies = 3;
         int rowsOfEnemies = 5;
         int columnsOfEnemies = 10;
 

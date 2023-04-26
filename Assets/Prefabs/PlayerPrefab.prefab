@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4684725209242443991}
-  runSpeed: 5
+  runSpeed: 15
   firePoint: {fileID: 2126845074687004071}
   bulletPrefab: {fileID: 0}
   runRight: {fileID: 0}

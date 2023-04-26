@@ -17,7 +17,7 @@ public class PlayerBullet : MonoBehaviour
     void Update()
     {
 
-        if(transform.position.y >= 5)
+        if(transform.position.y >= GameManager.Instance.topEdge)
         {
             Destroy(Bullet);
         }
