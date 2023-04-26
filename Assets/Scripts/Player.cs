@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Sprite idleLeft;
     public float swingTimer;
     public float animTimer = 10f;
+    public HealthManager healthManager;
 
     // Update is called once per frame
     void Update()
@@ -102,4 +103,6 @@ public class Player : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint);
     }
+
+
 }
