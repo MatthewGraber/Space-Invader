@@ -38,7 +38,7 @@ public class BasicEnemy : GameItem
 
     public void TakeDamage()
     {
-        // TODO: Give player points
+        Score.Instance.score += points;
         if (EnemyManager.Instance.enemies.Contains(this))
         {
             EnemyManager.Instance.enemies.Remove(this);

@@ -153,7 +153,7 @@ namespace Assets.Scripts
         // Returns current state
         public int CurrentState()
         {
-            if (y > initialY - pathHeight && enemies.Count > 0)
+            if ((y < initialY - pathHeight) && enemies.Count > 0)
             {
                 // Enemies win
                 return -1;

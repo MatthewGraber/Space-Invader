@@ -43,10 +43,12 @@ public class GameManager : MonoBehaviour
             }
             else if (state == -1)
             {
+                print("Enemies won");
                 changeState(GameState.Dying);
             }
             else if (player.healthManager.health <= 0)
             {
+                print("Player died");
                 changeState(GameState.Dying);
             }
         }
