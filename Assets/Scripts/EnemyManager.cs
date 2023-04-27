@@ -15,16 +15,16 @@ namespace Assets.Scripts
         public SpecialEnemy specialEnemy;
 
         // Total distances basic enemies travel along the x and y planes
-        int pathWidth = 40;
-        int pathHeight = 20;
+        public int pathWidth;
+        public int pathHeight;
 
         // How far we move along the x and y each time we update
         int xIncrement = 2;
         int yIncrement = 2;
 
         // Current coordiantes for the group
-        public int initialX = -55;
-        public int initialY = -5;
+        public int initialX;
+        public int initialY;
         int x;
         int y;
         bool goingRight = true;

@@ -96,12 +96,18 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
+        if (GameOverManager.gameIsOver == false)
+        {
+            player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
+        }
     }
 
     private void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint);
+        if (GameOverManager.gameIsOver == false)
+        {
+            Instantiate(bulletPrefab, firePoint);
+        }
     }
 
 

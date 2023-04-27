@@ -6,14 +6,14 @@ namespace Assets.Scripts
     public class SpecialEnemy : BasicEnemy
     {
         int width = 10;     // Width of the enemy
-        float moveInterval = 15f;
-        float y = 20f;
+        public float speed = 8f;
+        public float y = 20f;
 
         // Use this for initialization
         void Start()
         {
             if (Random.Range(0, 2) == 0) { 
-                moveInterval = -10f;
+                speed = -speed;
                 setPos(GameManager.Instance.rightEdge);
             }
             else { 
@@ -24,8 +24,8 @@ namespace Assets.Scripts
         // Update is called once per frame
         void Update()
         {
-            setPos(transform.position.x + Time.deltaTime*moveInterval);
-            if (moveInterval > 0) {
+            setPos(transform.position.x + Time.deltaTime*speed);
+            if (speed > 0) {
                 if (transform.position.x >= GameManager.Instance.rightEdge)
                 {
                     EnemyManager.Instance.specialEnemy = null;
