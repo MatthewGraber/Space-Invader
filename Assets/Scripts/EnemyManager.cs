@@ -122,6 +122,12 @@ namespace Assets.Scripts
         // Creates all eneimes and adds them to a list
         public void MakeEnemies()
         {
+            if (specialEnemy != null)
+            {
+                Destroy(specialEnemy.gameObject);
+                specialEnemy = null;
+            }
+
             for (int i = 0; i < columnsOfEnemies; i++)
             {
                 for (int j = 0; j < rowsOfEnemies; j++)

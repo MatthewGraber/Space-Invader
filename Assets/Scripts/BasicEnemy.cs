@@ -17,7 +17,7 @@ public class BasicEnemy : GameItem
     {
         if (ID == 2)
         {
-            timeToFire = Random.Range(1f, 15f);
+            timeToFire = Random.Range(1f, 20f*EnemyManager.Instance.period);
         }
     }
 
