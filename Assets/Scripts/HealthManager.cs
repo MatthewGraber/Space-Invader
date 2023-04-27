@@ -10,19 +10,24 @@ public class HealthManager : MonoBehaviour
     public Image[] hearts;
     public Sprite heartIMG;
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
             // TODO: Make this work
-            /*if (i<health)
+            if (i < health)
             {
                 hearts[i].enabled = true;
             }
             else
             {
                 hearts[i].enabled = false;
-            }*/
+            }
         }
     }
 

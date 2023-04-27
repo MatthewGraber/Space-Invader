@@ -16,7 +16,10 @@ public class Score : MonoBehaviour
         }
         else if (Instance != this)
         {
-            Instance.textDisplay = textDisplay;
+            if (textDisplay != null)
+            {
+                Instance.textDisplay = textDisplay;
+            }
             Destroy(gameObject);
         }
     }
