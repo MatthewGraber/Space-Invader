@@ -110,7 +110,7 @@ namespace Assets.Scripts
         {
             x = initialX;
             y = initialY;
-            period = period*0.9f;
+            period = period*0.8f;
             lastMove = Time.time;
             MakeEnemies();
             SetPositions();

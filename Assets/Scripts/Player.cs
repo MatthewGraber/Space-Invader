@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
             {
                 Shoot();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = swing;
-                swingTimer = 80;
+                swingTimer = 200;
             }
         }
 
