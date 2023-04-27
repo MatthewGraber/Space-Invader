@@ -964,8 +964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   level: 0
-  leftEdge: -60
-  rightEdge: 60
+  leftEdge: -43
+  rightEdge: 43
   topEdge: 40
   bottomEdge: -40
   player: {fileID: 379237800}
@@ -1563,7 +1563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169.37, y: -21.781998}
+  m_AnchoredPosition: {x: -169.37, y: -21.781982}
   m_SizeDelta: {x: 338.74, y: 43.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994437188
