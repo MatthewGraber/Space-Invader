@@ -92,16 +92,32 @@ public class Player : MonoBehaviour
                 swingTimer = 80;
             }
         }
+
+        // Make sure the player is in the world bounds
+        if (player.position.x > GameManager.Instance.rightEdge)
+        {
+            player.MovePosition(new Vector2(GameManager.Instance.rightEdge, player.position.y));
+        }
+        else if (player.position.x < GameManager.Instance.leftEdge)
+        {
+            player.MovePosition(new Vector2(GameManager.Instance.leftEdge, player.position.y));
+        }
     }
 
     private void FixedUpdate()
     {
-        player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
+        if (GameManager.Instance.gameState == GameState.Playing)
+        {
+            player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
+        }
     }
 
     private void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint);
+        if (GameManager.Instance.gameState == GameState.Playing)
+        {
+            Instantiate(bulletPrefab, firePoint);
+        }
     }
 
 

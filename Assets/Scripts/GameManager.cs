@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         {
 
         }
-        else if (state ==  GameState.Dying)
+        else if (state == GameState.Dying)
         {
             SceneManager.LoadScene("ScoreScene");
         }
