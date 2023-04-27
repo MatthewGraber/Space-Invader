@@ -110,7 +110,7 @@ namespace Assets.Scripts
         {
             x = initialX;
             y = initialY;
-            period = period*0.8f;
+            period = period*0.9f;
             lastMove = Time.time;
             MakeEnemies();
             SetPositions();
@@ -122,12 +122,6 @@ namespace Assets.Scripts
         // Creates all eneimes and adds them to a list
         public void MakeEnemies()
         {
-            if (specialEnemy != null)
-            {
-                Destroy(specialEnemy.gameObject);
-                specialEnemy = null;
-            }
-
             for (int i = 0; i < columnsOfEnemies; i++)
             {
                 for (int j = 0; j < rowsOfEnemies; j++)
