@@ -5,6 +5,7 @@ public class Score : MonoBehaviour
 {
     public static Score Instance;
     public int score;
+    public static int playerScore;
     public TextMeshProUGUI textDisplay;
 
     void Awake()
@@ -26,6 +27,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
+        playerScore = score;
         if (textDisplay != null)
         {
             textDisplay.text = score.ToString();
