@@ -33,6 +33,10 @@ public class HealthManager : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+        if (health == 0)
+        {
+            FindObjectOfType<GameOverManager>().EndGame();
+        }
     }
 
     public void takeDamage()
