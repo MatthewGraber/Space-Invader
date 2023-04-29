@@ -24,7 +24,7 @@ namespace Assets.Scripts
         // Update is called once per frame
         void Update()
         {
-            setPos(transform.position.x + Time.deltaTime*speed);
+            setPos(transform.position.x + Time.deltaTime * speed / EnemyManager.Instance.period);
             if (speed > 0) {
                 if (transform.position.x >= GameManager.Instance.rightEdge)
                 {

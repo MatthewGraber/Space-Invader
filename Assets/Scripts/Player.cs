@@ -92,11 +92,21 @@ public class Player : MonoBehaviour
                 swingTimer = 80;
             }
         }
+
+        // Make sure the player is in the world bounds
+        if (transform.position.x > GameManager.Instance.rightEdge)
+        {
+            transform.position = new Vector3(GameManager.Instance.rightEdge, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < GameManager.Instance.leftEdge)
+        {
+            transform.position = new Vector3(GameManager.Instance.leftEdge, transform.position.y, transform.position.z);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (GameOverManager.gameIsOver == false)
+        if (GameManager.Instance.gameState == GameState.Playing)
         {
             player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
         }
@@ -106,7 +116,8 @@ public class Player : MonoBehaviour
     {
         if (GameOverManager.gameIsOver == false)
         {
-            Instantiate(bulletPrefab, firePoint);
+            // Weird bug made the sword move when link was running into the world bounds
+            Instantiate(bulletPrefab, firePoint.position, new Quaternion(0f, 0f, 0f, 0f));
         }
     }
 
