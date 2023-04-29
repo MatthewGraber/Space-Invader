@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void Start()
     {
-        bullet.velocity = transform.up * projectileSpeed;
+        bullet.velocity = transform.up * projectileSpeed / EnemyManager.Instance.period;
     }
 
     // Update is called once per frame

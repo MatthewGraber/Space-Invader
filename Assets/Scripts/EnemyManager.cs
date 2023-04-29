@@ -60,7 +60,7 @@ namespace Assets.Scripts
             timeToSpecialSpawn -= Time.deltaTime;
             if (timeToSpecialSpawn < 0)
             {
-                timeToSpecialSpawn = Random.Range(20f, 40f);
+                timeToSpecialSpawn = Random.Range(20f*period, 40f*period);
                 var enemyPrefab = _items.Where(u => u.itemType == ItemType.CoolEnemy).First().ItemPrefab;
                 specialEnemy = (SpecialEnemy)Instantiate(enemyPrefab);
             }
@@ -110,7 +110,7 @@ namespace Assets.Scripts
         {
             x = initialX;
             y = initialY;
-            period = period*0.9f;
+            period = period*0.8f;
             lastMove = Time.time;
             MakeEnemies();
             SetPositions();

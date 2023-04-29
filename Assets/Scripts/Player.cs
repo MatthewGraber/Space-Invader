@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,12 +19,15 @@ public class Player : MonoBehaviour
     public Sprite idleLeft;
     public float swingTimer;
     public float animTimer = 10f;
+    float cooldown = 0f;
+    public float cooldownLen;
     public HealthManager healthManager;
 
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
+        if (cooldown > 0) { cooldown -= Time.deltaTime; }
 
         //Lord help me. This is a crazy nested if statement
         if (swingTimer < 20)
@@ -85,11 +89,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (swingTimer < 20)
+            if (cooldown <= 0)
             {
                 Shoot();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = swing;
                 swingTimer = 80;
+                cooldown = cooldownLen * EnemyManager.Instance.period;
             }
         }
 
@@ -108,7 +113,7 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.gameState == GameState.Playing)
         {
-            player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime);
+            player.MovePosition(player.position + movement * runSpeed * Time.fixedDeltaTime / EnemyManager.Instance.period);
         }
     }
 

@@ -17,7 +17,7 @@ public class BasicEnemy : GameItem
     {
         if (ID == 2)
         {
-            timeToFire = Random.Range(1f, 20f * EnemyManager.Instance.period);
+            timeToFire = Random.Range(1f*EnemyManager.Instance.period, 15f * EnemyManager.Instance.period);
         }
     }
 
@@ -49,7 +49,7 @@ public class BasicEnemy : GameItem
     public void SetPosition(int x, int y)
     {
         //transform.position.Set(x + xOffset, y + yOffset, 0);
-        transform.position = new Vector3(x + xOffset, y + yOffset, 1.0f);
+        transform.position = new Vector3(x + xOffset, y + yOffset, 0f);
     }
 
     public void Fire()

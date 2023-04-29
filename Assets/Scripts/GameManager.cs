@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         else if (state ==  GameState.Dying)
         {
             // SceneManager.LoadScene("ScoreScene");
+            FindObjectOfType<GameOverManager>().EndGame();
         }
 
     }

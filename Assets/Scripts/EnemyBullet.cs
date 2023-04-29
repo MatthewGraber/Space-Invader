@@ -13,7 +13,7 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            bullet.velocity = transform.up * projectileSpeed;
+            bullet.velocity = transform.up * projectileSpeed / EnemyManager.Instance.period;
         }
 
         // Update is called once per frame

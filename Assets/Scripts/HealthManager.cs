@@ -35,7 +35,7 @@ public class HealthManager : MonoBehaviour
         }
         if (health == 0)
         {
-            FindObjectOfType<GameOverManager>().EndGame();
+            //FindObjectOfType<GameOverManager>().EndGame();
         }
     }
 
